@@ -1,0 +1,440 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-v30-latin-regular.woff2') format('woff2'),
+        url('../fonts/roboto-v30-latin-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/roboto-v30-latin-700.woff2') format('woff2'),
+        url('../fonts/roboto-v30-latin-700.ttf') format('truetype');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/play-v19-latin-regular.woff2') format('woff2'),
+        url('../fonts/play-v19-latin-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/play-v19-latin-700.woff2') format('woff2'),
+        url('../fonts/play-v19-latin-700.ttf') format('truetype');
+}
+
+:root {
+    --color-main: #011C44;
+    --color-link: #2B7FFF;
+    --color-buttom: #FFFFFF;
+    --color-record: #4A4A4A;
+    --color-choose: #000000;
+    --color-date: #747272;
+}
+
+/*Main*/
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--color-main);
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 21.09px;
+    margin: 0px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+}
+
+a {
+    display: inline-block;
+}
+
+.container {
+    width: 100%;
+    max-width: 1288px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/*header*/
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.header-nav {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    gap: 40px;
+}
+
+.header-menu {
+    display: flex;
+    gap: 56px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.link-heder {
+    color: var(--color-main);
+    text-decoration: none;
+}
+
+.link-heder:hover {
+    color: var(--color-link);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.header-items {
+    display: flex;
+    gap: 32px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+/*kosmetologichna-klinika*/
+.kosmetologia-klinika {
+    padding: 123px 0px 156px 206px;
+    background-image: url('../images/fon-page.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.klinika {
+    margin-bottom: 16px;
+}
+
+.main-title {
+    color: var(--color-link);
+    font-family: 'Play', sans-serif;
+    font-size: 140px;
+    font-weight: 700;
+    line-height: 114px;
+    margin-bottom: 40px;
+}
+
+.button {
+    color: var(--color-buttom);
+    background-color: var(--color-link);
+    border: 2px solid var(--color-link);
+    width: 219px;
+    height: 53px;
+    padding: 16px 32px 16px 32px;
+    gap: 10px;
+    border-radius: 32px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 14px;
+}
+
+.button:hover {
+    color: var(--color-main);
+    background-color: transparent;
+}
+
+.record {
+    color: var(--color-record);
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+/*perevtilyujtes-v-spanbeaty-zone*/
+.perevtilyujtes {
+    padding-bottom: 88px;
+}
+
+.perevtilyujtes-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.perevtilyujtes-text {
+    max-width: 709px;
+}
+
+.perevtilyujtes-v-beaty-zone {
+    font-family: 'Play', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 74.05px;
+    margin-bottom: 40px;
+    max-width: 529px;
+}
+
+.main-beauty-zone {
+    color: var(--color-link);
+}
+
+.text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 38px;
+    margin-bottom: 0px;
+
+}
+
+.perevtilyujtes-text {
+    margin-bottom: 0px;
+}
+
+.beauty-zone {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 38px;
+}
+
+.image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.item {
+    width: 335px;
+    height: 328px;
+}
+
+.item:first-child {
+    margin-bottom: 40px;
+}
+
+
+/*perevagi*/
+
+.section-perevagi {
+    padding-top: 88px;
+}
+
+.section {
+    padding: 48px 0px;
+}
+
+.choose {
+    font-family: 'Play', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 74.05px;
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.choose-us {
+    color: var(--color-choose);
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.choose-fl {
+    display: flex;
+    justify-content: center;
+    gap: 56px;
+}
+
+.choose-us-article {
+    border-radius: 32px;
+    background-color: var(--color-buttom);
+    padding: 24px 32px;
+    height: 181px;
+    width: 316px;
+    text-align: center;
+}
+
+
+/*nashi-proceduri*/
+.formats-container {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.procedures {
+    color: var(--color-buttom);
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    display: flex;
+    gap: 56px;
+    justify-content: center;
+}
+
+.formats-list {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.formats-item {
+    flex-basis: calc((100% - 32px) / 3);
+    background-image: linear-gradient(180.05deg,
+            rgba(1, 28, 68, 0) 48.53%,
+            rgba(1, 28, 68, 0.725825) 84.61%,
+            #011C44 101.39%);
+    color: var(--color-main);
+}
+
+.format-card {
+    border-radius: 32px;
+    border: 1px solid lightcoral;
+    padding: 372px 77px 32px 115px;
+    height: 456px;
+    /*remove*/
+}
+
+.carousel-buttom {
+    width: 44px;
+    height: 44px;
+    padding: 0px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--color-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    fill: var(--color-main);
+    flex-shrink: 0;
+}
+
+.carousel-buttom:hover {
+    background-color: var(--color-link);
+    fill: var(--color-buttom);
+}
+
+.image-class {
+    border-radius: 120px 4px 120px 4px;
+}
+
+/*Yak-nas-znayti*/
+.yak-nas-section {
+    padding-bottom: 93px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 32px;
+}
+
+.contact-map {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 32px;
+}
+
+.yak-nas-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 25.78px;
+}
+
+/*footer*/
+footer {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+    background-color: var(--color-main);
+    padding: 56px;
+}
+
+.footer {
+    background-image: url('../images/footer-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer-container {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav {
+    flex-basis: 50%;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-menu,
+.footer-logo {
+    flex-grow: 1;
+}
+
+.link-footer {
+    color: var(--color-buttom);
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+.link-footer:hover {
+    color: var(--color-link);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.footer-address {
+    flex-basis: 50%;
+    display: flex;
+    gap: 20px;
+}
+
+.address-list,
+.address-info {
+    flex-grow: 1;
+}
+
+.adress-icon {
+    fill: var(--color-buttom);
+}
+
+.date {
+    color: var(--color-date);
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15.23px;
+}
