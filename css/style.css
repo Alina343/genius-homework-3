@@ -540,6 +540,7 @@ footer {
     flex-basis: 50%;
     display: flex;
     gap: 20px;
+    text-decoration: none;
 }
 
 .address-list,
