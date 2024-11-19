@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <header>
+    <header class="header">
       <div class="container">
         <div class="header-container">
           <nav class="header-nav">
@@ -54,14 +54,18 @@
     <main>
       <!--section 1-->
       <section class="kosmetologia-klinika" id="kosmetologichna-klinika">
-        <div class="container">
-          <p class="klinika">Косметологічна клініка</p>
-          <h1 class="main-title">Beauty <br />Zone</h1>
-          <button class="button" type="button">Замовити дзвінок</button>
-          <p class="record">
-            Запишись та отримай безкоштовну <br />
-            консультацію нашого косметолога
-          </p>
+        <div class="kosmetologia-klinika-image">
+          <div class="container">
+            <p class="klinika">Косметологічна клініка</p>
+            <h1 class="main-title">Beauty <br />Zone</h1>
+            <button class="button modal-btn-open" type="button">
+              Замовити дзвінок
+            </button>
+            <p class="record">
+              Запишись та отримай безкоштовну <br />
+              консультацію нашого косметолога
+            </p>
+          </div>
         </div>
       </section>
 
@@ -76,31 +80,51 @@
               </h2>
               <div class="text">
                 <p>
-                  Наша косметологічна клініка пропонує вам професійні послуги
-                  <br />
-                  з догляду за шкірою обличчя та тіла.
+                  Наша косметологічна клініка пропонує вам професійні послуги з
+                  догляду за шкірою обличчя та тіла.
                 </p>
                 <p class="perevtilyujtes-text">
                   B <span class="beauty-zone">Beaty Zone</span> ми гарантуємо
                   найвищі стандарти якості та приємний сервіс. Наші
                   косметологічні процедури та препарати допоможуть вам
-                  підтримувати свою красу та молодість. <br />З нами краса
-                  назавжди!
+                  підтримувати свою красу та молодість. <br />
+                  З нами краса назавжди!
                 </p>
               </div>
             </div>
             <div class="image">
               <img
-                src="./images/Mask group.png"
+                src="./images/mask-group.png"
                 alt="Зображення дівчини до процедури"
                 class="item"
               />
               <img
                 src="./images/mask-group-2.png"
                 alt="Зображення дівчини після процедури"
-                class="item"
+                class="item item-photo"
               />
             </div>
+            <img
+              src="./images/star-1.png"
+              alt="Іконка зірочки 1"
+              width="64"
+              height="64"
+              class="star-1"
+            />
+            <img
+              src="./images/star-2.png"
+              alt="Іконка зірочки 2"
+              width="40"
+              height="40"
+              class="star-2"
+            />
+            <img
+              src="./images/star-3.png"
+              alt="Іконка зірочки 3"
+              width="16"
+              height="16"
+              class="star-3"
+            />
           </div>
         </div>
       </section>
@@ -195,7 +219,7 @@
                 </article>
               </li>
             </ul>
-            <button class="carousel-buttom" type="button">
+            <button class="carousel-buttom next" type="button">
               <svg class="carousel-arrows" width="16" height="16">
                 <use href="./images/sprite-image.svg#icon-Arrow-1"></use>
               </svg>
@@ -239,6 +263,59 @@
                 Запишіться <span class="main-beauty-zone">безкоштовно</span> та
                 отримайте подарунок
               </p>
+              <form name="contact-form" autocomplete="on" novalidate>
+                <div class="form-contact">
+                  <label class="form-label visually-hidden" for="user-name"
+                    >Ваше ім'я та прізвище</label
+                  >
+                  <input
+                    class="form-input"
+                    type="text"
+                    name="user-name"
+                    id="user-name"
+                    placeholder="Ваше ім'я та прізвище"
+                    pattern="^[Є-ЯҐа-їґ]+\s[Є-ЯҐа-їґ]+$"
+                    required
+                  />
+                </div>
+
+                <div class="form-contact">
+                  <label class="form-label visually-hidden" for="user-tel"
+                    >Ваш номер телефону</label
+                  >
+                  <input
+                    class="form-input"
+                    type="tel"
+                    name="user-tel"
+                    id="user-tel"
+                    placeholder="Ваш номер телефону"
+                    pattern="^\+[0-9]{12}"
+                    required
+                  />
+                </div>
+
+                <div class="form-contact">
+                  <label class="form-label visually-hidden" for="user-email"
+                    >Ваша електронна пошта</label
+                  >
+                  <input
+                    class="form-input"
+                    type="email"
+                    name="user-email"
+                    id="user-email"
+                    placeholder="Ваша електронна пошта"
+                  />
+                </div>
+
+                <button class="button form-button" type="submit">
+                  Записатись безкоштовно
+                </button>
+                <p class="form-terms">
+                  Натискаючи на кнопку я погоджуюсь <br />
+                  з
+                  <a class="policy-form" href="/">політикою конфіденційності</a>
+                </p>
+              </form>
             </div>
           </div>
         </div>
@@ -290,6 +367,7 @@
                   >Україна, м. Київ, <br />вул. Тараса Шевченка 5</a
                 >
               </li>
+
               <li>
                 <a href="tel:+380960000007">
                   <svg class="adress-icon" width="42" height="42">
@@ -325,5 +403,70 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop">
+      <div class="modal">
+        <button class="modal-btn-close" type="button">Close</button>
+        <h2 class="title-form">Замовити дзвінок</h2>
+        <p class="descript-form">
+          Запишіться <span class="word-form">безкоштовно <br /></span> та
+          отримайте подарунок
+        </p>
+        <form name="modal-form" autocomplete="on">
+          <div class="form-field">
+            <label class="form-label visually-hidden" for="form-user-name"
+              >Ваше ім'я та прізвище</label
+            >
+            <input
+              class="form-input"
+              type="text"
+              name="form-user-name"
+              id="form-user-name"
+              placeholder="Ваше ім'я та прізвище"
+              pattern="^[Є-ЯҐа-їґ]+\s[Є-ЯҐа-їґ]+$"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label visually-hidden" for="form-user-tel"
+              >Ваш номер телефону</label
+            >
+            <input
+              class="form-input"
+              type="tel"
+              name="form-user-tel"
+              id="form-user-tel"
+              placeholder="Ваш номер телефону"
+              pattern="^\+[0-9]{12}"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label visually-hidden" for="form-user-email"
+              >Ваша електронна пошта</label
+            >
+            <input
+              class="form-input"
+              type="email"
+              name="form-user-email"
+              id="form-user-email"
+              placeholder="Ваша електронна пошта"
+              required
+            />
+          </div>
+
+          <button class="button form-button" type="submit">
+            Записатись безкоштовно
+          </button>
+          <p class="form-terms">
+            Натискаючи на кнопку я погоджуюсь <br />
+            з
+            <a class="policy-form" href="/">політикою конфіденційності</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script src="./modal.js"></script>
   </body>
 </html>

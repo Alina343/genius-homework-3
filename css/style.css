@@ -87,11 +87,19 @@ a {
 }
 
 /*header*/
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    padding: 32px 0px 32px 0px;
+}
+
 .header-container {
     display: flex;
     align-items: center;
     gap: 40px;
-    height: 106px;
 }
 
 .header-nav {
@@ -111,12 +119,13 @@ a {
 .link-heder {
     color: var(--color-main);
     text-decoration: none;
+    transition: color 0.2s;
 }
 
 .link-heder:hover {
     color: var(--color-link);
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .header-items {
@@ -133,7 +142,9 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
 }
+
 
 .klinika {
     margin-bottom: 16px;
@@ -165,6 +176,7 @@ a {
 .button:hover {
     color: var(--color-main);
     background-color: transparent;
+    transition: background-color 0.2s;
 }
 
 .record {
@@ -173,6 +185,8 @@ a {
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
+    text-align: center;
+    max-width: 238px;
 }
 
 /*perevtilyujtes-v-spanbeaty-zone*/
@@ -184,10 +198,11 @@ a {
     display: flex;
     justify-content: space-between;
     gap: 40px;
+    position: relative;
 }
 
 .perevtilyujtes-text {
-    max-width: 709px;
+    margin-top: 40px;
 }
 
 .perevtilyujtes-v-beaty-zone {
@@ -224,10 +239,14 @@ a {
 }
 
 .image {
-    display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
+
+.item-photo {
+    position: relative;
+    left: 172px;
 }
 
 .item {
@@ -239,6 +258,58 @@ a {
     margin-bottom: 40px;
 }
 
+.star-1 {
+    position: absolute;
+    top: 336px;
+    right: 294px;
+    bottom: 271px;
+    left: 858px;
+    animation: scale 5s linear 0s infinite;
+}
+
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.star-2 {
+    position: absolute;
+    top: 32px;
+    right: 0;
+    bottom: 608px;
+    left: 1212px;
+    animation: scale 5s linear 0s infinite;
+}
+
+
+.star-3 {
+    position: absolute;
+    top: 269px;
+    right: 6px;
+    bottom: 404px;
+    left: 1213px;
+    animation: spin 5s linear 0s infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 /*perevagi*/
 
@@ -319,19 +390,24 @@ a {
 
 .formats-item {
     flex-basis: calc((100% - 32px) / 3);
+}
+
+.format-card {
     background-image: linear-gradient(180.05deg,
             rgba(1, 28, 68, 0) 48.53%,
             rgba(1, 28, 68, 0.725825) 84.61%,
             #011C44 101.39%);
     color: var(--color-main);
-}
-
-.format-card {
-    border-radius: 32px;
     border: 1px solid lightcoral;
     padding: 372px 77px 32px 115px;
     height: 456px;
+    border-radius: 120px 4px 120px 4px;
+    transition: transform 0.2s;
     /*remove*/
+}
+
+.format-card:hover {
+    transform: scale(1.05);
 }
 
 .carousel-buttom {
@@ -352,6 +428,12 @@ a {
 .carousel-buttom:hover {
     background-color: var(--color-link);
     fill: var(--color-buttom);
+    transition: background-color 0.2s;
+}
+
+.carousel-buttom.next {
+    transform: rotate(180deg);
+
 }
 
 .image-class {
@@ -366,12 +448,15 @@ a {
 .contact-container {
     display: flex;
     gap: 32px;
+    justify-content: center;
 }
 
 .contact-map {
+
     flex-shrink: 0;
     border: none;
     border-radius: 32px;
+
 }
 
 .yak-nas-text {
@@ -379,6 +464,28 @@ a {
     font-size: 22px;
     font-weight: 600;
     line-height: 25.78px;
+    text-align: center;
+    color: var(--color-buttom);
+    display: block;
+    margin: 0 auto 32px auto;
+}
+
+.contact-form {
+    background-color: var(--color-main);
+    background-image: url('../images/footer-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 422px;
+    height: 482px;
+    border-radius: 32px;
+    padding: 48px 57px 48px 56px;
+
+}
+
+.form-contact {
+    position: relative;
+    margin-bottom: 16px;
 }
 
 /*footer*/
@@ -396,6 +503,7 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 
 .footer-container {
@@ -423,8 +531,9 @@ footer {
 .link-footer:hover {
     color: var(--color-link);
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 16px;
+    transition: color 0.2s;
 }
 
 .footer-address {
@@ -448,4 +557,170 @@ footer {
     font-size: 13px;
     font-weight: 400;
     line-height: 15.23px;
+}
+
+.footer::after {
+    position: absolute;
+    background-image: url('../images/coametic-photo.png');
+    content: '';
+    width: 247px;
+    height: 152px;
+    bottom: 0px;
+    right: 0px;
+}
+
+/*Modal*/
+.backdrop {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #011F4A66;
+    padding: 20px 0px;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+.modal {
+    position: relative;
+    width: 100%;
+    max-width: 723px;
+    height: 100%;
+    max-height: 681px;
+    background-color: var(--color-main);
+    background-image: url('../images/footer-background.png');
+    border-radius: 48px;
+    padding: 42px 144px;
+    color: var(--color-buttom);
+    overflow-y: auto;
+}
+
+.modal-btn-close {
+    position: absolute;
+    top: 42px;
+    right: 42px;
+}
+
+/*Form*/
+.form-input {
+    width: 100%;
+    max-width: 310px;
+    border: 2px solid var(--color-date);
+    border-radius: 32px;
+    background-color: transparent;
+    font-size: 13px;
+    padding: 18px 33px;
+    display: block;
+    margin: 0 auto;
+    color: var(--color-buttom);
+}
+
+.form-label {
+    position: absolute;
+    top: 16px;
+    left: 42px;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.17;
+    color: var(--color-buttom);
+    transition: transform 0.2s;
+}
+
+.form-field {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.form-input:focus {
+    background-color: var(--color-date);
+    border: 2px solid var(--color-date);
+    outline: none;
+    color: var(--color-buttom);
+    transition: background-color 0.2s;
+}
+
+.form-input::placeholder {
+    color: var(--color-buttom);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.17;
+}
+
+.form-input:focus::placeholder {
+    color: var(--color-buttom);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.17;
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.form-button {
+    display: block;
+    margin: 0 auto 8px auto;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 281px;
+}
+
+
+.form-button:hover {
+    color: var(--color-main);
+    background-color: var(--color-buttom);
+}
+
+.form-terms {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--color-date);
+    max-width: 213px;
+    display: block;
+    margin: 0 auto 48px auto;
+    text-align: center;
+}
+
+.policy-form {
+    color: var(--color-date);
+}
+
+.title-form {
+    font-family: 'Play', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 74.05px;
+    text-align: center;
+    max-width: 435px;
+    max-height: 148px;
+    margin-bottom: 40px;
+}
+
+.descript-form {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 auto 32px auto;
+}
+
+.word-form {
+    color: var(--color-link);
 }
