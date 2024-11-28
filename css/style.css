@@ -252,6 +252,7 @@ a {
 .item {
     width: 335px;
     height: 328px;
+    border-radius: 50%;
 }
 
 .item:first-child {
@@ -315,12 +316,18 @@ a {
 
 .section-perevagi {
     padding-top: 88px;
+
+    position: relative;
 }
 
 .perevagi-fon {
-    background-image: url('../images/fon-3.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: absolute;
+    margin: 0 auto;
+    padding: 0 24px;
+    left: 0;
+    right: 0;
+    top: -142px;
+    z-index: -1;
 }
 
 .section {
@@ -393,12 +400,12 @@ a {
 }
 
 .format-card {
+    position: relative;
     background-image: linear-gradient(180.05deg,
             rgba(1, 28, 68, 0) 48.53%,
             rgba(1, 28, 68, 0.725825) 84.61%,
             #011C44 101.39%);
     color: var(--color-main);
-    border: 1px solid lightcoral;
     padding: 372px 77px 32px 115px;
     height: 456px;
     border-radius: 120px 4px 120px 4px;
@@ -438,6 +445,21 @@ a {
 
 .image-class {
     border-radius: 120px 4px 120px 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -180;
+}
+
+.procedures-text {
+    display: block;
+    margin: 0 auto;
+    color: var(--color-buttom);
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
 }
 
 /*Yak-nas-znayti*/
@@ -470,22 +492,27 @@ a {
     margin: 0 auto 32px auto;
 }
 
-.contact-form {
-    background-color: var(--color-main);
-    background-image: url('../images/footer-background.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 422px;
-    height: 482px;
-    border-radius: 32px;
-    padding: 48px 57px 48px 56px;
-
-}
 
 .form-contact {
-    position: relative;
     margin-bottom: 16px;
+}
+
+.modal-contact-form {
+    position: relative;
+    width: 100%;
+    max-width: 422px;
+    height: 100%;
+    max-height: 482px;
+    background-color: var(--color-main);
+    background-image: url('../images/footer-background.png');
+    border-radius: 32px;
+    padding: 48px 57px 48px 56px;
+    color: var(--color-buttom);
+    overflow-y: auto;
+}
+
+.modal-contact-form::-webkit-scrollbar {
+    display: none;
 }
 
 /*footer*/
@@ -540,7 +567,6 @@ footer {
     flex-basis: 50%;
     display: flex;
     gap: 20px;
-    text-decoration: none;
 }
 
 .address-list,
@@ -606,10 +632,18 @@ footer {
     overflow-y: auto;
 }
 
+.modal::-webkit-scrollbar {
+    display: none;
+}
+
 .modal-btn-close {
     position: absolute;
     top: 42px;
     right: 42px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
 
 /*Form*/
@@ -695,7 +729,7 @@ footer {
     color: var(--color-date);
     max-width: 213px;
     display: block;
-    margin: 0 auto 48px auto;
+    margin: 0 auto 0 auto;
     text-align: center;
 }
 
